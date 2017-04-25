@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9525" systemVersion="14F1605" minimumToolsVersion="Xcode 7.0">
+    <entity name="ZLAuthor" representedClassName="ZLAuthor" syncable="YES">
+        <attribute name="authorDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="books" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="ZLBook" inverseName="author" inverseEntity="ZLBook" syncable="YES"/>
+    </entity>
+    <entity name="ZLBook" representedClassName="ZLBook" syncable="YES">
+        <attribute name="bookid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="publishHouse" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="author" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ZLAuthor" inverseName="books" inverseEntity="ZLAuthor" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="ZLAuthor" positionX="-54" positionY="-9" width="128" height="90"/>
+        <element name="ZLBook" positionX="-36" positionY="9" width="128" height="105"/>
+    </elements>
+</model>
